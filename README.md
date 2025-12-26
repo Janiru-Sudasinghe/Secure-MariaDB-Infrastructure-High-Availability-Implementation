@@ -127,6 +127,18 @@ The environment consists of three Virtual Machines (VMs) simulating a segmented 
 
 ---
 
+## 📂 Configuration & Scripts Repository
+*Access the raw configuration files used in this deployment below.*
+
+| File Category | Filename | Description |
+| :--- | :--- | :--- |
+| **Master Config** | [`configs/master_server.cnf`](./configs/master_server.cnf) | Master node settings: Hardening, Custom Port (3307), and Binary Logging. |
+| **Slave Config** | [`configs/slave_server.cnf`](./configs/slave_server.cnf) | Slave node settings: Read-Only mode and Relay Log configuration. |
+| **Intrusion Prevention** | [`configs/jail.local`](./configs/jail.local) | Fail2Ban Jail configuration for blocking brute-force attacks on MariaDB. |
+| **Automation** | [`scripts/secure_backup.sh`](./scripts/secure_backup.sh) | Bash script for automated, compressed, and encrypted daily backups. |
+
+---
+
 ## 📂 Repository Structure
 
 ```text
