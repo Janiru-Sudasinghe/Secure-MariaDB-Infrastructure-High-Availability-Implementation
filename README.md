@@ -126,3 +126,18 @@ The environment consists of three Virtual Machines (VMs) simulating a segmented 
 * **Evidence 3:** [📸 Slave Status (Sync Success)](./images/Task%208.2.png)
 
 ---
+
+## 📂 Repository Structure
+
+```text
+├── README.md                  <-- Project documentation
+├── images/                    <-- Screenshots of verification steps
+│   ├── Diagram.png
+│   ├── Task 1.0.png
+│   └── ...
+├── configs/                   <-- Folder for configuration files
+│   ├── master_server.cnf
+│   ├── slave_server.cnf
+│   └── jail.local
+└── scripts/                   <-- Folder for bash scripts
+    └── secure_backup.sh
