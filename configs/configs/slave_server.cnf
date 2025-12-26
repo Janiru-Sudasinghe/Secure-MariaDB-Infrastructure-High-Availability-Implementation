@@ -1,0 +1,28 @@
+# /etc/my.cnf.d/server.cnf on Slave Node (192.168.120.129)
+
+[mysqld]
+# ----------------------------------------------
+# 1. NETWORK SECURITY
+# ----------------------------------------------
+user = mysql
+port = 3307
+# Listen on all interfaces or specific IP as needed
+# bind-address = 192.168.120.129 
+
+# ----------------------------------------------
+# 2. REPLICATION SETTINGS (SLAVE)
+# ----------------------------------------------
+server-id = 2
+report_host = slave1
+relay_log = mariadb-relay-bin
+
+# ----------------------------------------------
+# 3. SAFETY CONTROLS
+# ----------------------------------------------
+# Crucial: Prevent accidental writes to the slave
+read_only = 1
+
+# ----------------------------------------------
+# 4. LOGGING
+# ----------------------------------------------
+log-error = /var/log/mariadb/mariadb.log

@@ -1,0 +1,34 @@
+# /etc/my.cnf.d/server.cnf on Master Node (192.168.120.128)
+
+[mysqld]
+# ----------------------------------------------
+# 1. NETWORK SECURITY & HARDENING
+# ----------------------------------------------
+user = mysql
+port = 3307
+bind-address = 192.168.120.128
+pid-file = /run/mariadb/mariadb.pid
+socket = /var/lib/mysql/mysql.sock
+
+# Disable symbolic links to prevent file system attacks
+symbolic-links = 0
+
+# Prevent loading data from local files (SQL Injection mitigation)
+local-infile = 0
+
+# Hide version to prevent information leakage
+skip-show-database
+
+# ----------------------------------------------
+# 2. REPLICATION SETTINGS (MASTER)
+# ----------------------------------------------
+server-id = 1
+log_bin = mysql-bin
+binlog_format = ROW
+expire_logs_days = 7
+max_binlog_size = 100M
+
+# ----------------------------------------------
+# 3. LOGGING
+# ----------------------------------------------
+log-error = /var/log/mariadb/mariadb.log

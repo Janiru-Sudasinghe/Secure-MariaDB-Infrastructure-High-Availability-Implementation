@@ -1,0 +1,15 @@
+# /etc/fail2ban/jail.local
+
+[DEFAULT]
+ignoreip = 127.0.0.1/8 192.168.120.129 192.168.120.130
+bantime  = 600
+findtime  = 600
+maxretry = 3
+
+[mysqld-auth]
+enabled  = true
+filter   = mysqld-auth
+port     = 3307
+logpath  = /var/log/mariadb/mariadb.log
+maxretry = 3
+action   = iptables[name=MariaDB, port=3307, protocol=tcp]
