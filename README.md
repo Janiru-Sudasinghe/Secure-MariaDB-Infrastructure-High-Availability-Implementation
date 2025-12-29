@@ -127,7 +127,7 @@ The environment consists of three Virtual Machines (VMs) simulating a segmented 
 
 ---
 
-## 📂 Configuration & Scripts Repository
+## 📂 Configuration & Codebase Navigation
 *Access the raw configuration files used in this deployment below.*
 
 | File Category | Filename | Description |
