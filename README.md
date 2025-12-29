@@ -31,7 +31,7 @@ The environment consists of three Virtual Machines (VMs) simulating a segmented 
 
 ---
 
-## Topology Diagram
+## Network Topology Diagram
 
 <p align="center">
   <img src="./images/Diagram.png" width="600" alt="Network Topology Diagram">
